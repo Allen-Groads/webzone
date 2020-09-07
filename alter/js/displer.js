@@ -1,4 +1,4 @@
-$.getJSON( './data6.json', function( data ) {
+$.getJSON( './data7.json', function( data ) {
 	  
 		new Vue({
 			el: '#table',
