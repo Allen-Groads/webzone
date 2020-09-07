@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Poofin Map</title>
+	<meta charset="utf-8">
+	
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-vue.min.css" />
+	
+</head>
+
+<body>
+
+<div class='container'>
+	<div class='row'>
+		<div class='col'>
+			<div id="table">
+			  <b-input-group class="mt-3 mb-3" size="sm">
+				<b-form-input v-model="keyword" placeholder="Search NPC ID/Name (9.0.1.35789)" type="text"></b-form-input>
+				<b-input-group-text slot="append">
+				  <b-btn class="p-0" :disabled="!keyword" variant="link" size="sm" @click="keyword = ''"><i class="fa fa-remove"></i></b-btn>
+				</b-input-group-text>
+			  </b-input-group>
+			  <b-table :fields="fields" 
+				:items="items" 
+				  :current-page="currentPage"
+				  :per-page="perPage"
+				  :keyword="keyword">
+				  <template slot="DisplayID0" slot-scope="row" >
+					<i class='disperer'>{{ row.value }}</i>
+				  </template>
+				  <template slot="DisplayID1" slot-scope="row" >
+					<i class='disperer'>{{ row.value }}</i>
+				  </template>
+				  <template slot="DisplayID2" slot-scope="row" >
+					<i class='disperer'>{{ row.value }}</i>
+				  </template>
+				  <template slot="DisplayID3" slot-scope="row" >
+					<i class='disperer'>{{ row.value }}</i>
+				  </template>
+				  </b-table>
+			  <b-row>
+				  <b-col md="6" class="my-1">
+					<b-pagination
+					  v-model="currentPage"
+					  :total-rows="totalRows"
+					  :per-page="perPage"
+				  :filter="filter"
+					  class="my-0"
+				  @filtered="onFiltered"
+					></b-pagination>
+				  </b-col>
+				</b-row>
+			</div>
+		</div>
+</div>
+
+<style>.disperer {
+cursor:pointer;
+color:darkblue;
+font-weight:bold;
+}
+.disperer:hover{
+color:lightblue;
+}
+</style>
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+	
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/bootstrap-vue.min.js"></script>
+    <script src="./js/displer.js"></script>
+
+</body>
+
+</html>

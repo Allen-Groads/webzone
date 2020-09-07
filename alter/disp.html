@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Disper!</title>
+
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/vue.min.js"></script>
+	</head>
+
+<body>
+<div class='container'>
+<div id='disper' class='row'>
+	<div class='col-12'>
+		<div class='row'>
+			<div class='col'>
+				Позиция
+			</div>
+			<div class='col'>DisplayID</div>
+		</div>
+	</div><hr>
+	<div class='col-12' v-for="(entry, $index) in entries">
+		<div class='row'>
+			<div class='col'>
+				{{$index}}
+			</div>
+			<div class='col'>{{entry}}</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<style>body{max-width:100%;max-height:100%;}</style>
+<script>
+$.urlParam = function(name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+        .exec(window.location.search);
+
+    return (results !== null) ? results[1] || 0 : false;
+}
+
+if ($.urlParam('disp')) {
+    display = $.urlParam('disp');
+    $.getJSON('https://wow.zamimg.com/modelviewer/beta/meta/npc/' + display + '.json', function(data) {
+        if (data['Equipment']) {
+            var blog = new Vue({
+                el: '#disper',
+
+                data: {
+                    entries: data['Equipment']
+                },
+
+                methods: {}
+                //functions
+
+            })
+        } else {
+            $('#disper').html('Похоже... Отсутствуют предметы :(');
+        }
+    })
+}else {
+ $('#disper').html('Похоже... Дисп как-то... Ограничен... :с');
+}
+
+</script>
+
+</body>
+</html>
