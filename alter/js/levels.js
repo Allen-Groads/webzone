@@ -25,7 +25,7 @@ $.getJSON( 'https://logon.rp-wow.ru/api/Levels', function( data ) {
 			computed: {
 				items () {
 					return this.keyword
-						? this.dataArray.filter(item => item.date.includes(this.keyword)  || item.charName.includes(this.keyword))
+						? this.dataArray.filter(item => item.comment.includes(this.keyword)  || item.charName.includes(this.keyword))
 						: this.dataArray
 						
 						this.totalRows = this.dataArray.length
