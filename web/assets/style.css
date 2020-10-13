@@ -20,27 +20,27 @@ body {
                 border-bottom: 1px rgba(0, 255, 0, 0.2) solid;
             }
             #section1 {
-                background: url("./img/bg-1.jpg") fixed center;
+                background: url("../img/bg-1.jpg") fixed center;
                 background-size: cover;
                 min-height: 100vh;
                 padding-top: 56px;
             }
             #section2 {
-                background: url("./img/bg-2.jpg") fixed center;
+                background: url("../img/bg-2.jpg") fixed center;
                 background-size: cover;
                 padding-top: 65px;
                 padding-bottom: 25px;
                 min-height: 100vh;
             }
             #section3 {
-                background: url(./img/bg-3.png) center repeat;
+                background: url(../img/bg-3.png) center repeat;
                 background-size: 400px !important;
                 padding-top: 65px;
                 padding-bottom: 25px;
                 min-height: 30vh;
             }
             #section4 {
-                background: url(./img/bg-3.png) center repeat;
+                background: url(../img/bg-3.png) center repeat;
                 background-size: 400px !important;
                 padding-top: 65px;
                 padding-bottom: 25px;
