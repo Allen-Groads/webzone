@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto Condensed',sans-serif;
+}.navbar-custom .navbar-nav {
+    letter-spacing: 1px;
+}
+            .fas{display: none;}
+            #section1 div section {
+                background: rgba(0, 0, 0, 0.7);
+                border-left: 5px solid rgba(0, 255, 0, 0.2);
+                padding: 10px;
+            }
+            #section1 li {
+                margin-bottom: 4px;
+            }
+            #section1 div section h3 {
+                text-align: center;
+                font-size: 1.35rem;
+                padding-top: 7px;
+                padding-bottom: 15px;
+                border-bottom: 1px rgba(0, 255, 0, 0.2) solid;
+            }
+            #section1 {
+                background: url("./img/bg-1.jpg") fixed center;
+                background-size: cover;
+                min-height: 100vh;
+                padding-top: 56px;
+            }
+            #section2 {
+                background: url("./img/bg-2.jpg") fixed center;
+                background-size: cover;
+                padding-top: 65px;
+                padding-bottom: 25px;
+                min-height: 100vh;
+            }
+            #section3 {
+                background: url(./img/bg-3.png) center repeat;
+                background-size: 400px !important;
+                padding-top: 65px;
+                padding-bottom: 25px;
+                min-height: 30vh;
+            }
+            #section4 {
+                background: url(./img/bg-3.png) center repeat;
+                background-size: 400px !important;
+                padding-top: 65px;
+                padding-bottom: 25px;
+                min-height: 30vh;
+            }
+            #lightgallery li a img {
+                max-height: 300px;
+                padding: 3px;
+                background: white;
+                border: 1px white solid;
+            }
+            #lightgallery li {
+                text-align: center;
+                margin: 15px;
+            }
+            #lightgallery {
+                border: 1px rgba(255, 255, 255, 0.2) solid;
+                text-align: center;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 30px 0px;
+                max-height: 65vh;
+                overflow-y: scroll;
+            }
+
+            #lightgallery img {
+                padding: 2px;
+                margin: 5px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 5%;
+            }
+            #lightgallery img:hover {
+                background: rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                filter: contrast(0.5);
+            }
+            #lightgallery::-webkit-scrollbar {
+                width: 12px;
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+
+            #lightgallery::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                background-color: #000000c7;
+            }
+            .listener {text-align:center}
+            .listener ul{text-align:left}
+            span.shower {
+                cursor: pointer;
+                color: green;
+                font-weight: bold;
+            }
+
+            span.shower:hover {
+                color: darkgreen;
+            }
+            .bx-wrapper {
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+            .slider h4 {
+                text-align: center;
+                padding: 15px 0px;
+                border-bottom: 2px solid green;
+                color: #343a40!important;
+                font-weight: bold;
+            }
+
+            .slider p {
+                text-align: center;
+            }
+            .email .fa {
+    color: #ef6767;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.phone .fa-phone-square {
+    color: green;
+    font-size: 25px;
+}
